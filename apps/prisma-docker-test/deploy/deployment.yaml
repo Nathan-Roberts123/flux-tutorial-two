@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: prisma-docker-test
-        image: docker.io/nsindiso/prisma-docker-test:0.0.3 # {"$imagepolicy": "default:prisma-docker-test"}
+        image: docker.io/nsindiso/prisma-docker-test:0.0.4 # {"$imagepolicy": "default:prisma-docker-test"}
         ports:
         - containerPort: 3000
         volumeMounts:
