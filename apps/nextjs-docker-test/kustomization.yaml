@@ -1,0 +1,12 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: nextjs-docker-test
+  namespace: default
+spec:
+  interval: 15m
+  path: "./deploy"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: nextjs-docker-test

@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prisma-docker-test
+  labels:
+    app: prisma-docker-test
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: prisma-docker-test
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: prisma-docker-test
+    spec:
+      containers:
+      - name: prisma-docker-test
+        image: docker.io/nsindiso/prisma-docker-test
+        ports:
+        - containerPort: 3000
+        volumeMounts:
+        - name: config-volume
+          mountPath: /configs/
+      volumes:
+      - name: config-volume
+        configMap:
+          name: prisma-docker-test
