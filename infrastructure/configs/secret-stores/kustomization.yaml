@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   interval: 15m
-  path: "./infrastructure/configs/secret-stores"
+  path: "./infrastructure/configs/secret-stores/deploy"
   prune: true
   sourceRef:
     kind: GitRepository
