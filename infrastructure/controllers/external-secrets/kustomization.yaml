@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   interval: 15m
-  path: "./infrastructure/controllers/external-secrets"
+  path: "./infrastructure/controllers/external-secrets/deploy"
   prune: true
   sourceRef:
     kind: GitRepository
