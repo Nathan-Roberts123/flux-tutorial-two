@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   interval: 15m
-  path: "./deploy"
+  path: "./apps/prisma-docker-test/deploy"
   prune: true
   sourceRef:
     kind: GitRepository
